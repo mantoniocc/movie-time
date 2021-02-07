@@ -54,4 +54,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  touchableView:{
+    marginBottom: 30,
+    width: 150,
+    height: 50,
+    alignItems: 'center',
+    backgroundColor: 5,
+    borderRadius: 10
+  }
 });
