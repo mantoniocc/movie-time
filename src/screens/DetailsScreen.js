@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Button, View, Text, StyleSheet } from 'react-native';
+import config from '../../config';
 
 const DetailsScreen = ({navigation, route}) => {
   const movie = route.params.movie;
@@ -7,7 +8,7 @@ const DetailsScreen = ({navigation, route}) => {
 
   useEffect(() => {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://www.omdbapi.com/?apikey=111404cd&t=star+wars&y=1977');
+    xhr.open('GET', `${config.API_URL}?apikey=${config.API_KEY}&&t=star+wars&y=1977`);
     xhr.send();
 
     xhr.onload = () => {
